@@ -1,65 +1,34 @@
-import Image from "next/image";
 import styles from "./page.module.css";
 
 export default function Home() {
   return (
     <div className={styles.page}>
       <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className={styles.intro}>
-          <h1>New Webpage creation Via Github</h1>
+        <section className={styles.hero}>
+          <span className={styles.kicker}>About Page</span>
+          <h1>Welcome, I am Noel Biju</h1>
           <p>
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learning
-            </a>{" "}
-            center.
+            This page introduces me, my class, and the project I am building.
+            It gives a quick snapshot of who I am and what this work is about.
           </p>
-        </div>
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className={styles.secondary}
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
+        </section>
+
+        <section className={styles.cards} aria-label="About details">
+          <article className={styles.card}>
+            <span className={styles.cardLabel}>Name</span>
+            <strong>Noel Biju</strong>
+          </article>
+
+          <article className={styles.card}>
+            <span className={styles.cardLabel}>Class</span>
+            <strong>S5 CSD</strong>
+          </article>
+
+          <article className={styles.card}>
+            <span className={styles.cardLabel}>Project</span>
+            <strong>Next.js</strong>
+          </article>
+        </section>
       </main>
     </div>
   );
