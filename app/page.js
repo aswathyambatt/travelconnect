@@ -35,6 +35,7 @@ export default function Home() {
             center.
           </p>
         </div>
+
         <div className={styles.ctas}>
           <a
             className={styles.primary}
