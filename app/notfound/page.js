@@ -1,14 +1,16 @@
-export default async function ErrorSolvedPage({ searchParams }) {
-  const params = await searchParams;
+import { notFound } from "next/navigation";
 
-  if (params.error === "true") {
-    throw new Error("Something went wrong!");
+export default function StudentsPage() {
+  // Simulate data not found
+  const student = null;
+
+  if (!student) {
+    notFound();
   }
 
   return (
     <div>
-      <h1>Hello Students</h1>
-      <p>Add <code>?error=true</code> to the URL to trigger the error.</p>
+      <h1>{student.name}</h1>
     </div>
   );
 }
