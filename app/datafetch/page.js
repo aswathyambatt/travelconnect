@@ -1,15 +1,17 @@
-export default async function StudentsPage() {
-  const res = await fetch("https://travelconnect-kappa.vercel.app/api/students");
-  const students = await res.json();
+// app/posts/page.js
+
+export default async function PostsPage() {
+  const res = await fetch("https://jsonplaceholder.typicode.com/posts");
+  const posts = await res.json();
 
   return (
     <div>
-      <h1>Students</h1>
-
+      <h1>Blog Posts</h1>
       <ul>
-        {students.map((student) => (
-          <li key={student.id}>
-            <strong>{student.name}</strong> - {student.class}
+        {posts.map((post) => (
+          <li key={post.id}>
+            <h2>{post.title}</h2>
+            <p>{post.body}</p>
           </li>
         ))}
       </ul>
