@@ -1,5 +1,5 @@
 export default async function StudentsPage() {
-  const res = await fetch("http://localhost:3000/api/students");
+  const res = await fetch("https://travelconnect-kappa.vercel.app/api/students");
   const students = await res.json();
 
   return (
